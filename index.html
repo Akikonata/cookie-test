@@ -18,7 +18,7 @@
 (function(){
   $.cookie('the_cookie','the_value');
   console.log(document.cookie);
-  function delCookie('key'){
+  function delCookie(key){
     var date = new Date(); 
     date.setTime(date.getTime() - 10000); 
     document.cookie = key + "=a; expires=" + date.toGMTString(); 
