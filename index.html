@@ -17,10 +17,14 @@
 <script>
 (function(){
   $.cookie('the_cookie','the_value');
-  console.log($.cookie('the_cookie'));
-  $.cookie('the_cookie','', { expires: -1});
-  console.log($.cookie('the_cookie'));
-  console.log(document.cookie)
+  console.log(document.cookie);
+  function delCookie('key'){
+    var date = new Date(); 
+    date.setTime(date.getTime() - 10000); 
+    document.cookie = key + "=a; expires=" + date.toGMTString(); 
+  }
+  delCookie('the_cookie');
+  console.log(document.cookie);
 })();
 </script>
 </html>
